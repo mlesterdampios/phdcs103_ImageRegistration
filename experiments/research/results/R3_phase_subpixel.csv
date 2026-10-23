@@ -1,0 +1,13 @@
+condition,upsample_factor,nominal_grid_spacing_px,estimated_correction_y_px,estimated_correction_x_px,translation_component_error_px,pure_translation_assumption_satisfied
+clean,1,1.0,-5.0,4.0,0.5000000000000001,True
+clean,10,0.1,-5.4,3.7,0.0,True
+clean,100,0.01,-5.4,3.7,0.0,True
+noise,1,1.0,-5.0,4.0,0.5000000000000001,True
+noise,10,0.1,-5.4,3.7,0.0,True
+noise,100,0.01,-5.4,3.7,0.0,True
+occluded,1,1.0,-5.0,4.0,0.5000000000000001,True
+occluded,10,0.1,-5.4,3.6,0.10000000000000009,True
+occluded,100,0.01,-5.39,3.65,0.05099019513592824,True
+rotated,1,1.0,-7.0,3.0,1.7464249196572978,False
+rotated,10,0.1,-6.9,3.0,1.6552945357246849,False
+rotated,100,0.01,-6.88,2.98,1.6458432489152783,False

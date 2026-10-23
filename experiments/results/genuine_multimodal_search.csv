@@ -1,0 +1,4 @@
+method,native_optimum_x_px,native_optimum_y_px,shifted_optimum_x_px,shifted_optimum_y_px,recovery_x_px,recovery_y_px,perturbation_recovery_error_px,valid_pixels
+mse,0,0,-9,6,-9,6,0.0,27756
+ncc,0,0,-9,6,-9,6,0.0,27756
+mi_nats,0,0,-9,6,-9,6,0.0,27756

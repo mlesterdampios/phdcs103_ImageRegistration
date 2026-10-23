@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "authors": "Richard Szeliski",
+    "year": 2004,
+    "title": "Image Alignment and Stitching: A Tutorial",
+    "publication": "Microsoft Research Technical Report MSR-TR-2004-92",
+    "url": "https://www.microsoft.com/en-us/research/publication/image-alignment-and-stitching-a-tutorial/",
+    "accessed": "2026-10-15",
+    "supports": "Registration as geometric alignment; direct and feature approaches; registration precedes blending; motion and parallax limitations."
+  },
+  {
+    "id": 2,
+    "authors": "OpenCV contributors",
+    "year": 2026,
+    "title": "ORB (Oriented FAST and Rotated BRIEF)",
+    "publication": "OpenCV 4.13.0 documentation",
+    "url": "https://docs.opencv.org/4.13.0/d1/d89/tutorial_py_orb.html",
+    "accessed": "2026-10-15",
+    "original_paper": "E. Rublee, V. Rabaud, K. Konolige, and G. Bradski, ORB: An efficient alternative to SIFT or SURF, ICCV, pp. 2564–2571, 2011, doi:10.1109/ICCV.2011.6126544.",
+    "supports": "ORB combines FAST detection with oriented binary descriptions; Hamming distance for default binary descriptors. Do not repeat the tutorial's outdated SIFT patent claim."
+  },
+  {
+    "id": 3,
+    "authors": "Martin A. Fischler and Robert C. Bolles",
+    "year": 1981,
+    "title": "Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography",
+    "publication": "Communications of the ACM, 24(6), pp. 381–395",
+    "doi": "10.1145/358669.358692",
+    "url": "https://www.sri.com/publication/artificial-intelligence-pubs/random-sample-consensus-a-paradigm-for-model-fitting-with-applications-to-image-analysis-and-automated-cartography/",
+    "accessed": "2026-10-15",
+    "supports": "Robust model fitting in measurements contaminated by gross errors. The institution page displays a 1980 page date but its publication citation is 1981."
+  },
+  {
+    "id": 4,
+    "authors": "OpenCV contributors",
+    "year": 2026,
+    "title": "Camera Calibration and 3D Reconstruction: estimateAffinePartial2D",
+    "publication": "OpenCV 4.13.0 documentation",
+    "url": "https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html",
+    "accessed": "2026-10-15",
+    "supports": "Four-degree-of-freedom partial affine/similarity estimate; RANSAC reprojection threshold, confidence, iteration settings and inlier mask."
+  },
+  {
+    "id": 5,
+    "authors": "Manuel Guizar-Sicairos, Samuel T. Thurman, and James R. Fienup",
+    "year": 2008,
+    "title": "Efficient subpixel image registration algorithms",
+    "publication": "Optics Letters, 33(2), pp. 156–158",
+    "doi": "10.1364/OL.33.000156",
+    "url": "https://doi.org/10.1364/OL.33.000156",
+    "verified_full_text_url": "https://citeseerx.ist.psu.edu/document?doi=b5978b756bdcad061e3269eafaa69452a0c43e1b&repid=rep1&type=pdf",
+    "accessed": "2026-10-15",
+    "supports": "Efficient Fourier-domain translation estimation with local matrix-multiply DFT refinement. Numerical sampling resolution is not guaranteed registration accuracy."
+  },
+  {
+    "id": 6,
+    "authors": "scikit-image contributors",
+    "year": 2026,
+    "title": "skimage.registration: phase_cross_correlation",
+    "publication": "scikit-image stable API documentation",
+    "url": "https://scikit-image.org/docs/stable/api/skimage.registration.html",
+    "example_url": "https://scikit-image.org/docs/stable/auto_examples/registration/plot_register_translation.html",
+    "accessed": "2026-10-15",
+    "supports": "Returned shift aligns moving to reference in array-axis order; upsample_factor; normalization and Fourier periodic ambiguity. Returned error is not geometric error in pixels."
+  },
+  {
+    "id": 7,
+    "authors": "Paul Viola and William M. Wells III",
+    "year": 1997,
+    "title": "Alignment by Maximization of Mutual Information",
+    "publication": "International Journal of Computer Vision, 24(2), pp. 137–154",
+    "doi": "10.1023/A:1007958904918",
+    "url": "https://doi.org/10.1023/A:1007958904918",
+    "verified_full_text_url": "https://cs.uwaterloo.ca/~mannr/cs886-w10/ViolaWells_IJCV.pdf",
+    "accessed": "2026-10-15",
+    "supports": "Statistical dependence can support alignment without equal image intensities; mutual information formulation and MRI alignment."
+  },
+  {
+    "id": 8,
+    "authors": "SimpleITK contributors",
+    "year": 2026,
+    "title": "Registration Overview",
+    "publication": "SimpleITK documentation",
+    "url": "https://simpleitk.readthedocs.io/en/latest/registrationOverview.html",
+    "accessed": "2026-10-15",
+    "supports": "Transform, metric, optimizer and interpolation; initialization; fixed-to-moving sampling convention; maximized metrics may be internally negated."
+  },
+  {
+    "id": 9,
+    "authors": "Torsten Rohlfing",
+    "year": 2012,
+    "title": "Image Similarity and Tissue Overlaps as Surrogates for Image Registration Accuracy: Widely Used but Unreliable",
+    "publication": "IEEE Transactions on Medical Imaging, 31(2), pp. 153–163",
+    "doi": "10.1109/TMI.2011.2163944",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3274625/",
+    "accessed": "2026-10-15",
+    "supports": "Primary experimental evidence that similarity/overlap alone can give misleading registration conclusions. Study concerns nonrigid registration; used here as a caution, not a measured result of this 2D study."
+  },
+  {
+    "id": 10,
+    "authors": "scikit-image contributors; image by Lav Varshney",
+    "year": 2026,
+    "title": "skimage.data.camera",
+    "publication": "scikit-image stable data API documentation",
+    "url": "https://scikit-image.org/docs/stable/api/skimage.data#skimage.data.camera",
+    "accessed": "2026-10-15",
+    "license": "CC0; no copyright restrictions, as stated by the scikit-image data documentation.",
+    "supports": "512 × 512 grayscale source image; replacement since version 0.18; current photographer and CC0 dedication."
+  },
+  {
+    "id": 11,
+    "authors": "Insight Software Consortium / ITK contributors",
+    "year": 2026,
+    "title": "ITK ImageRegistration2.cxx: T1 and proton-density MRI registration example",
+    "publication": "ITK Examples/RegistrationITKv4, source repository",
+    "url": "https://raw.githubusercontent.com/InsightSoftwareConsortium/ITK/main/Examples/RegistrationITKv4/ImageRegistration2.cxx",
+    "accessed": "2026-10-15",
+    "supports": "Identifies BrainT1SliceBorder20.png as T1 MRI and BrainProtonDensitySliceBorder20.png as PD MRI, unit spacing, and describes intentionally shifted input. Does not establish original acquisition or clinical ground truth."
+  },
+  {
+    "id": 12,
+    "authors": "Insight Software Consortium / NumFOCUS",
+    "year": 2026,
+    "title": "ITK LICENSE",
+    "publication": "ITK source repository",
+    "url": "https://raw.githubusercontent.com/InsightSoftwareConsortium/ITK/main/LICENSE",
+    "accessed": "2026-10-15",
+    "license": "Apache License 2.0 (repository-level license).",
+    "supports": "Repository distribution terms; retained attribution. No separate image-specific acquisition provenance was located."
+  },
+  {
+    "id": 13,
+    "authors": "Shinji Umeyama",
+    "year": 1991,
+    "title": "Least-Squares Estimation of Transformation Parameters Between Two Point Patterns",
+    "url": "https://doi.org/10.1109/34.88573",
+    "doi": "10.1109/34.88573",
+    "publication": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "accessed": "2026-10-23"
+  },
+  {
+    "id": 14,
+    "authors": "Ethan Rublee, Vincent Rabaud, Kurt Konolige, Gary Bradski",
+    "year": 2011,
+    "title": "ORB: An efficient alternative to SIFT or SURF",
+    "url": "https://doi.org/10.1109/ICCV.2011.6126544",
+    "doi": "10.1109/ICCV.2011.6126544",
+    "publication": "2011 International Conference on Computer Vision",
+    "accessed": "2026-10-23"
+  },
+  {
+    "id": 15,
+    "authors": "Colin Studholme, Derek L. G. Hill, David J. Hawkes",
+    "year": 1999,
+    "title": "An overlap invariant entropy measure of 3D medical image alignment",
+    "url": "https://doi.org/10.1016/S0031-3203(98)00091-0",
+    "doi": "10.1016/S0031-3203(98)00091-0",
+    "publication": "Pattern Recognition",
+    "accessed": "2026-10-23"
+  },
+  {
+    "id": 16,
+    "authors": "Nathan D. Cahill, Julia A. Schnabel, J. Alison Noble, David J. Hawkes",
+    "year": 2008,
+    "title": "Revisiting overlap invariance in medical image alignment",
+    "url": "https://doi.org/10.1109/CVPRW.2008.4562989",
+    "doi": "10.1109/CVPRW.2008.4562989",
+    "publication": "2008 IEEE Computer Society Conference on Computer Vision and Pattern Recognition Workshops",
+    "accessed": "2026-10-23"
+  }
+]

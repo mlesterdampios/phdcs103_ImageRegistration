@@ -1,0 +1,4 @@
+method,correction_x_px,correction_y_px,metric_score,baseline_mean_px,estimated_mean_px,oracle_mean_px,success_le_2px,search_radius_px,search_step_px,valid_pixels
+mse,-16,-16,0.2130681872367859,13.038404810405298,23.53720459187964,0.0,False,16,1,10404
+ncc,16,16,-0.17258824408054352,13.038404810405298,28.460498941515414,0.0,False,16,1,10404
+mi_nats,-11,7,2.412159368938488,13.038404810405298,0.0,0.0,True,16,1,10404

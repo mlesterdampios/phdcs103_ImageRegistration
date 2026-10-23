@@ -1,0 +1,399 @@
+{
+  "passed": true,
+  "method": "Actual headless Chrome/Chromium on the relocated repository demo",
+  "lesson_count": 45,
+  "tests": [
+    {
+      "name": "All three embedded applications are ready",
+      "passed": true
+    },
+    {
+      "name": "Default route is the presentation route",
+      "passed": true
+    },
+    {
+      "name": "Embedded presentation path resolves",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-I preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-I explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson pixels preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson pixels explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson brightness preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson brightness explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson align preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson align explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson transform-extras preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson transform-extras explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson transform preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson transform explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson point-pairs preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson point-pairs explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson sigma preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson sigma explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson check-dot-trace preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson check-dot-trace explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson R1 preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson R1 explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-II preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-II explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson orb preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson orb explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson residual preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson residual explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson ransac preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson ransac explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson feature preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson feature explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson R2 preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson R2 explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-III preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-III explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson mse preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson mse explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson rmse preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson rmse explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson ncc preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson ncc explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson offset preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson offset explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson graph preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson graph explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson translation preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson translation explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson translation-error preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson translation-error explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson R3 preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson R3 explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-IV preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-IV explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson contrast-rules preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson contrast-rules explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson mi preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson mi explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson mi-calculation preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson mi-calculation explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson contrast preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson contrast explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson known-offset-error preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson known-offset-error explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson R4 preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson R4 explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson mri-achievement preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson mri-achievement explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-V preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-V explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson nmi-calculation preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson nmi-calculation explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson R5 preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson R5 explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-VI preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson purpose-VI explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson test preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson test explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson independent-error preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson independent-error explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson original-results preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson original-results explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson table preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson table explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson R6 preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson R6 explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson review preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson review explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson screen-map preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson screen-map explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "Lesson complete-review preserves its slide references",
+      "passed": true
+    },
+    {
+      "name": "Lesson complete-review explains purpose and interpretation",
+      "passed": true
+    },
+    {
+      "name": "All 45 ordered lessons were visited",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript errors",
+      "passed": true
+    },
+    {
+      "name": "No runtime internet requests",
+      "passed": true
+    },
+    {
+      "name": "No sibling runtime file requests",
+      "passed": true
+    }
+  ],
+  "javascript_errors": 0,
+  "external_requests": 0,
+  "sibling_file_requests": 0,
+  "limitation": "Navigation/reference smoke test; it does not replace the original detailed numerical and interaction checks."
+}

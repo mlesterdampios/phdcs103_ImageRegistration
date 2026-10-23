@@ -1,0 +1,8 @@
+# Preserve bytes across commits/checkouts because recorded source SHA-256
+# checksums are part of the experimental evidence. Ordinary text diffs remain
+# available; disable automatic line-ending conversion rather than rewriting data.
+* -text
+*.pptx binary
+*.png binary
+*.jpg binary
+*.jpeg binary

@@ -1,0 +1,85 @@
+{
+  "id": "intensity",
+  "slides": [
+    15,
+    16
+  ],
+  "method": "Windowed phase cross-correlation",
+  "n_trials": 12,
+  "resolution_px": [
+    384,
+    384
+  ],
+  "baseline_mean_px": 14.558253714229153,
+  "estimated_mean_px": 0.12406443499471347,
+  "estimated_median_px": 0.1227416649068492,
+  "estimated_max_px": 0.17612310811246012,
+  "oracle_mean_px": 0.0,
+  "criterion_px": 2.0,
+  "success_count": 12,
+  "seconds_median": 0.021340400002372917,
+  "figures": [
+    "intensity_example.png",
+    "intensity_results.png"
+  ],
+  "metric_direction": "Independent-point geometric error, pixels; lower is better.",
+  "records_csv": "intensity_trials.csv",
+  "noise_levels": [
+    0,
+    0.03,
+    0.06,
+    0.1
+  ],
+  "settings": {
+    "upsample_factor": 20,
+    "normalization": "phase",
+    "window": "Hanning, mean-centered",
+    "translation_range_px": [
+      -18,
+      18
+    ]
+  },
+  "example": {
+    "forward_matrix": [
+      [
+        1.0,
+        0.0,
+        16.792829946255083
+      ],
+      [
+        -0.0,
+        1.0,
+        -15.212539612866742
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "estimated_matrix": [
+      [
+        1.0,
+        0.0,
+        -16.850000381469727
+      ],
+      [
+        -0.0,
+        1.0,
+        15.149999618530273
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "point_error": {
+      "mean_px": 0.08473316678985543,
+      "median_px": 0.08473316678985021,
+      "max_px": 0.08473316678986938,
+      "n_points": 64
+    }
+  },
+  "interpretation": "The trials test translation, brightness, and noise only; the method is not a general rotation or deformation solver."
+}

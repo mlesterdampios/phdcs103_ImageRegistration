@@ -1,0 +1,13 @@
+# Tested on Python 3.12.7 (CPU, Windows). Python 3.10-3.12 recommended.
+numpy==1.26.4
+scipy==1.13.1
+scikit-image==0.24.0
+opencv-python==4.11.0.86
+matplotlib==3.9.2
+Pillow==10.4.0
+nbformat==5.10.4
+nbclient==0.8.0
+ipykernel>=6.29,<7
+jupyterlab>=4.2,<5
+nbconvert>=7.16,<8
+markdown>=3.5,<4

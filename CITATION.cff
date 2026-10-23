@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this teaching laboratory when referring to its original materials."
+type: software
+title: "Image Registration: A Step-by-Step Teaching Laboratory"
+authors:
+  - family-names: "Dampios"
+    given-names: "Mark Lester O."
+    affiliation: "Technological Institute of the Philippines - Manila"
+abstract: "CPU-based image registration experiments, an annotated presentation, and an offline interactive teaching demonstration for Parts I-VI of PHDCS103."
+keywords:
+  - image registration
+  - image processing
+  - ORB
+  - RANSAC
+  - mutual information
+  - reproducible teaching

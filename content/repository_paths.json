@@ -1,0 +1,18 @@
+{
+  "presentation": "presentation/Dampios_Image_Registration_Chronological_Explained.pptx",
+  "demo": "demo/index.html",
+  "notebook": "notebooks/01_chronological_experiments.ipynb",
+  "mapping": {
+    "chronological/presentation/Dampios_Image_Registration_Chronological_Explained.pptx": "presentation/Dampios_Image_Registration_Chronological_Explained.pptx",
+    "chronological/demo/index.html": "demo/index.html",
+    "chronological/notebooks/": "notebooks/",
+    "chronological/content/": "content/",
+    "chronological/figures/": "figures/",
+    "scripts/registration_lab.py": "experiments/scripts/registration_lab.py",
+    "data/": "experiments/data/",
+    "results/": "experiments/results/",
+    "beginner/": "experiments/beginner/",
+    "research/": "experiments/research/"
+  },
+  "note": "Historical source-deck identifiers are provenance, not bundled runtime dependencies."
+}

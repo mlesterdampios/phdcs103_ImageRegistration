@@ -1,0 +1,3 @@
+method,n_trials,baseline_mean_px,estimated_mean_px,oracle_mean_px,success_count,criterion_px
+ORB + RANSAC similarity transform,15,23.303981312672114,0.1726806339679545,0.0,15,2.0
+Windowed phase cross-correlation,12,14.558253714229153,0.12406443499471347,0.0,12,2.0

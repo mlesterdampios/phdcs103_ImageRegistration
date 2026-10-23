@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "method": "Recompute the ten measurement checks from relocated saved evidence and three light MRI score samples; no ORB/search rerun",
+  "saved_values_identical": true,
+  "source_hashes_verified": 6
+}

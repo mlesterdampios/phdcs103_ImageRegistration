@@ -1,0 +1,78 @@
+{
+  "id": "transform",
+  "slides": [
+    6,
+    7
+  ],
+  "purpose": "Explain transform direction, interpolation, and valid overlap.",
+  "n_trials": 1,
+  "resolution_px": [
+    384,
+    384
+  ],
+  "forward_matrix": [
+    [
+      1.0074920287558198,
+      0.21414904154229214,
+      -18.444264962088432
+    ],
+    [
+      -0.21414904154229214,
+      1.0074920287558198,
+      24.574817948609457
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "inverse_matrix": [
+    [
+      0.9496578647901026,
+      -0.201856010502679,
+      22.476315991455735
+    ],
+    [
+      0.201856010502679,
+      0.9496578647901026,
+      -19.61458339878043
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "baseline_mean_px": 35.39737282482152,
+  "estimated_mean_px": 3.228568966241367e-14,
+  "oracle_mean_px": 0.0,
+  "image_comparison": {
+    "baseline": {
+      "mse": 0.055586676210391595,
+      "ncc": 0.6955099209225615,
+      "mi_nats": 0.6363446306779429,
+      "valid_pixels": 114611
+    },
+    "estimated": {
+      "mse": 0.0002780218382681886,
+      "ncc": 0.998401933759058,
+      "mi_nats": 2.287499700737663,
+      "valid_pixels": 114611
+    },
+    "oracle": {
+      "mse": 0.0002780218382681886,
+      "ncc": 0.998401933759058,
+      "mi_nats": 2.287499700737663,
+      "valid_pixels": 114611
+    },
+    "overlap_fraction": 0.7772555881076388
+  },
+  "figures": [
+    "transform_lab.png",
+    "valid_overlap.png",
+    "interpolation_zoom.png",
+    "fusion_handoff.png"
+  ],
+  "interpretation": "The known inverse eliminates coordinate error; resampling cannot restore all lost intensities."
+}

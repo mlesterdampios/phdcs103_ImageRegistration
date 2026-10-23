@@ -1,0 +1,79 @@
+{
+  "notebooks": [
+    {
+      "file": "01_transform_and_resampling.ipynb",
+      "code_cells": 4,
+      "error_outputs": 0,
+      "unexecuted_code_cells": 0
+    },
+    {
+      "file": "02_feature_registration.ipynb",
+      "code_cells": 4,
+      "error_outputs": 0,
+      "unexecuted_code_cells": 0
+    },
+    {
+      "file": "03_intensity_translation.ipynb",
+      "code_cells": 3,
+      "error_outputs": 0,
+      "unexecuted_code_cells": 0
+    },
+    {
+      "file": "04_multimodal_and_metrics.ipynb",
+      "code_cells": 4,
+      "error_outputs": 0,
+      "unexecuted_code_cells": 0
+    },
+    {
+      "file": "05_evaluation_and_reproducibility.ipynb",
+      "code_cells": 4,
+      "error_outputs": 0,
+      "unexecuted_code_cells": 0
+    }
+  ],
+  "html": [
+    {
+      "file": "01_transform_and_resampling.html",
+      "scripts": 0,
+      "remote_resources": 0,
+      "static_formula_images": 8
+    },
+    {
+      "file": "02_feature_registration.html",
+      "scripts": 0,
+      "remote_resources": 0,
+      "static_formula_images": 0
+    },
+    {
+      "file": "03_intensity_translation.html",
+      "scripts": 0,
+      "remote_resources": 0,
+      "static_formula_images": 0
+    },
+    {
+      "file": "04_multimodal_and_metrics.html",
+      "scripts": 0,
+      "remote_resources": 0,
+      "static_formula_images": 6
+    },
+    {
+      "file": "05_evaluation_and_reproducibility.html",
+      "scripts": 0,
+      "remote_resources": 0,
+      "static_formula_images": 4
+    }
+  ],
+  "support_checks": [
+    {
+      "case": "simulated",
+      "candidates": 1089,
+      "all_candidates_source_supported": true
+    },
+    {
+      "case": "genuine",
+      "candidates": 1089,
+      "all_candidates_source_supported": true
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "method": "Git hash-object filtered versus raw with core.autocrlf=true in a temporary external bare repository",
+  "files_checked": [
+    "demo/index.html",
+    "content/lesson_plan.json",
+    "notebooks/01_chronological_experiments.ipynb",
+    "experiments/research/results/R5_overlap_mi_nmi.csv"
+  ],
+  "byte_preserving_attributes": true,
+  "pack_contains_git_metadata": false
+}

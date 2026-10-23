@@ -1,0 +1,9 @@
+{
+  "notebook": "notebooks\\02_original_lab_every_term.ipynb",
+  "total_cells": 53,
+  "executed_code_cells": 21,
+  "errors": 0,
+  "offline_html_no_remote_assets": true,
+  "slides": "35-52",
+  "source_script": "scripts/build_complete_notebook.py"
+}

@@ -1,0 +1,63 @@
+{
+  "seed": 20261031,
+  "criterion_px": 2.0,
+  "criterion_status": "Predefined classroom demonstration criterion; not an industry or clinical standard.",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-image": "0.24.0",
+    "matplotlib": "3.9.2",
+    "Pillow": "10.4.0",
+    "nbformat": "5.10.4",
+    "nbclient": "0.8.0",
+    "opencv-python": "4.11.0"
+  },
+  "opencv_threads": 1,
+  "data_sha256": {
+    "brain_pd.png": "c9eec8a16e094573ccdb2a0065209c1ca8740132d779ef1df1132d7c0dd42823",
+    "brain_t1.png": "d25689977c23f46933320686d042240655a26d4aefa66a9caea71fb7147ec15f",
+    "camera.png": "4cfbba3559df4e7d6765b5aac6e8cd5d3309f728f3eb35e155e644c48a6fcca7",
+    "feature_moving.png": "fe0d76bde6e32379b017702dc6b49dfa731dc83062feb6ef514b660377b753e5",
+    "feature_registered.png": "629729f029395c53996dff9be0764d4b799d26ca94d0206a78d62a8f53bf3fab",
+    "fixed_384.png": "7a49a72033991d9320a4c50e3a0831d4a7a0ce8aaedfe60f962d895cc366dcdb",
+    "intensity_moving.png": "17ef7435f68f1a824268d02708e8c2b9011ef659c698b80b4bbbe33aedfff5ef",
+    "intensity_registered.png": "3a4609ffe566066e054c6703e09658097fd43f03b0bf6da52daedf20c1031084",
+    "simulated_contrast_fixed.png": "9413e5b56d20be3b14cf8b5a3a583ce656064abfd8a452768e5361198c656ba9",
+    "simulated_contrast_moving.png": "b1b3bf8799ecb72202f3a5ea32f65a40578ed2392672b9e1a22125db05242119",
+    "simulated_contrast_registered.png": "55a79a02c81b2ef8fe5df9b14642d8ed10fd53e46870a87eb9171d35937ee6e1",
+    "transform_moving.png": "fb0462729cc30aaef8fdf23c0240d85824470c4c2455e0099091bc5cb477529d"
+  },
+  "datasets": [
+    {
+      "file": "data/camera.png",
+      "name": "scikit-image camera",
+      "source": "https://scikit-image.org/docs/stable/api/skimage.data#skimage.data.camera",
+      "license": "CC0; photographer Lav Varshney",
+      "original_size_xy": [
+        512,
+        512
+      ]
+    },
+    {
+      "files": [
+        "data/brain_pd.png",
+        "data/brain_t1.png"
+      ],
+      "name": "ITK T1 / PD MRI teaching pair",
+      "source_commit": "50c5b33430e98b91b53fbaae2dd94f0edb2a639a",
+      "source": "https://github.com/InsightSoftwareConsortium/ITK/tree/50c5b33430e98b91b53fbaae2dd94f0edb2a639a/Examples/Data",
+      "license": "Repository Apache 2.0; original acquisition metadata not established",
+      "original_size_xy": [
+        221,
+        257
+      ]
+    }
+  ],
+  "coordinate_convention": "x is column, y is row; forward A fixed->moving; registration M moving->fixed.",
+  "evaluation": "Independent 8 x 8 grid in central 70% of fixed image; retained only if forward points remain in image; never used for fitting.",
+  "timing": "Hardware-specific registration operation only, excluding image loading and plotting.",
+  "repeats": "Controlled perturbations of one camera image, not independent subjects or a population benchmark."
+}

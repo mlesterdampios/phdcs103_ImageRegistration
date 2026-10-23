@@ -1,0 +1,129 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "canonical deck path has an explicit repository mapping",
+      "passed": true
+    },
+    {
+      "name": "presentation and demo retain their relative relationship",
+      "passed": true
+    },
+    {
+      "name": "all repository path mappings resolve",
+      "passed": true,
+      "issues": [],
+      "provenance_boundary": "Canonical historical source-deck identifiers are preserved provenance, not runtime dependencies."
+    },
+    {
+      "name": "copied source files retain their exact published bytes",
+      "passed": true,
+      "files_checked": 223,
+      "issues": []
+    },
+    {
+      "name": "latest presentation checksum matches source copy manifest",
+      "passed": true,
+      "sha256": "b7a3db6c78787ccae6fc39aa2a8e43939974c5e372d97f18559225f548ed4d43"
+    },
+    {
+      "name": "latest standalone demo checksum matches source copy manifest",
+      "passed": true,
+      "sha256": "a01eb72d97020f29615031d9ab9d2ba13e303602097ee7a42077e720c877e558"
+    },
+    {
+      "name": "PowerPoint archive integrity",
+      "passed": true
+    },
+    {
+      "name": "actual PowerPoint slide count matches canonical lesson",
+      "passed": true,
+      "slides": 86
+    },
+    {
+      "name": "all actual slide titles follow canonical order",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "name": "44 visible and 42 hidden slides match canonical route",
+      "passed": true,
+      "visible": 44,
+      "hidden": 42,
+      "issues": []
+    },
+    {
+      "name": "all slides contain their full canonical discussion notes",
+      "passed": true,
+      "slides_checked": 86,
+      "issues": []
+    },
+    {
+      "name": "all declared PowerPoint demo targets are correct",
+      "passed": true,
+      "links_checked": 71,
+      "issues": []
+    },
+    {
+      "name": "demo embeds the exact current slide and step sequences",
+      "passed": true,
+      "slides": 86,
+      "steps": 45
+    },
+    {
+      "name": "demo embeds the current measurement records",
+      "passed": true
+    },
+    {
+      "name": "demo retains three embedded source laboratories and measurement images",
+      "passed": true,
+      "embedded_laboratories": 3
+    },
+    {
+      "name": "notebook has 22 executed code cells and no saved errors",
+      "passed": true,
+      "code_cells": 22,
+      "errors": []
+    },
+    {
+      "name": "all local Markdown and image links resolve inside the repository",
+      "passed": true,
+      "local_links_checked": 181,
+      "issues": []
+    },
+    {
+      "name": "distribution contains no runtime or private artifacts",
+      "passed": true,
+      "strict_pack": true,
+      "issues": [],
+      "skipped_runtime_paths": 0
+    },
+    {
+      "name": "all JSON data and notebook JSON parse",
+      "passed": true,
+      "files_checked": 50,
+      "issues": []
+    },
+    {
+      "name": "all Python sources compile as syntax trees without bytecode",
+      "passed": true,
+      "files_checked": 7,
+      "issues": []
+    },
+    {
+      "name": "every file is below GitHub's 100 MiB regular-file limit",
+      "passed": true,
+      "largest_file": "demo/index.html",
+      "largest_bytes": 6833400
+    }
+  ],
+  "checks_passed": 21,
+  "checks_total": 21,
+  "findings": [],
+  "repository_files_scanned": 247,
+  "source_copy_files": 223,
+  "experiment_pipelines_rerun": false,
+  "strict_pack": true,
+  "verification_scope": "Portable saved-artifact checks; browser behavior is tested separately with tools/check_demo.cjs.",
+  "privacy": "Report uses repository-relative paths only. No source workspace is required."
+}

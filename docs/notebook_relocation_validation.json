@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "method": "Execute all cells after relocation; keep shipped notebook unchanged",
+  "executed_code_cells": 22,
+  "errors": 0
+}

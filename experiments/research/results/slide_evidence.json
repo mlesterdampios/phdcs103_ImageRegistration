@@ -1,0 +1,227 @@
+[
+  {
+    "id": "R1",
+    "title": "Point spread matters beyond fit agreement",
+    "headers": [
+      "Layout / sigma (px)",
+      "Fit residual (moving px)",
+      "Unused-point error (fixed px)"
+    ],
+    "rows": [
+      [
+        "spread / 0.5",
+        "0.600",
+        "0.212"
+      ],
+      [
+        "spread / 2",
+        "2.401",
+        "0.846"
+      ],
+      [
+        "clustered / 0.5",
+        "0.600",
+        "2.992"
+      ],
+      [
+        "clustered / 2",
+        "2.401",
+        "10.757"
+      ]
+    ],
+    "caption": "Mean Euclidean distances; one frozen 16-point click-noise realization. Twenty-five check points never fitted.",
+    "purpose": "Test whether equally small fitting residuals ensure accurate recovery away from a clustered fit region.",
+    "settings": "16 known correspondences; spread 192 x 192 px versus cluster 4 x 4 px; similarity fit; sigma 0, 0.5, 2 per moving coordinate.",
+    "interpretation": "At the same sigma, fitting residuals are almost identical but clustered correspondences extrapolate poorly.",
+    "own_limitations": "New 2-D points, one draw, no wrong matches; no robustness or original numerical benchmark replication.",
+    "citation_ids": [
+      13
+    ]
+  },
+  {
+    "id": "R2",
+    "title": "Actual ORB under rotation and image blur",
+    "headers": [
+      "Rotation / blur sigma",
+      "Matches / inliers",
+      "Unused-point error (px)"
+    ],
+    "rows": [
+      [
+        "0 deg / 0 px",
+        "558 / 538",
+        "0.211"
+      ],
+      [
+        "0 deg / 3 px",
+        "109 / 65",
+        "1.802"
+      ],
+      [
+        "75 deg / 0 px",
+        "529 / 457",
+        "0.751"
+      ],
+      [
+        "75 deg / 3 px",
+        "112 / 68",
+        "1.773"
+      ]
+    ],
+    "caption": "Saved OpenCV ORB + Hamming ratio + similarity RANSAC. Errors are mean fixed-pixel distances on 25 unused exact points.",
+    "purpose": "Observe how a recognizable-place pipeline changes when the movable picture turns or becomes smoother.",
+    "settings": "256 px public camera; maximum 1,000 keypoints; WTA_K=2; ratio <0.75; threshold 3 moving px; 4 angles x 3 blur levels.",
+    "interpretation": "Strong blur reduced match counts and increased independent geometric error in these measured conditions.",
+    "own_limitations": "One public photo; synthetic movement; no detector benchmark, real camera acquisition or timing comparison. Returned inlier masks precede final refinement.",
+    "citation_ids": [
+      14,
+      3
+    ]
+  },
+  {
+    "id": "R3",
+    "title": "Subpixel spacing is not an accuracy promise",
+    "headers": [
+      "Condition",
+      "Upsampling",
+      "Translation-component error (px)"
+    ],
+    "rows": [
+      [
+        "clean",
+        "1",
+        "0.500"
+      ],
+      [
+        "clean",
+        "100",
+        "0.000"
+      ],
+      [
+        "occluded",
+        "100",
+        "0.051"
+      ],
+      [
+        "rotated",
+        "100",
+        "1.646"
+      ]
+    ],
+    "caption": "Known correction=(-5.4,+3.7) in (y,x). Finer grid improves this clean example; rotation violates the translation-only model.",
+    "purpose": "Separate numerical search spacing from measured recovery accuracy and the transform model's assumptions.",
+    "settings": "256 px periodic Fourier shift; upsample 1/10/100; clean, noise sigma 0.03, occlusion, extra 5-degree rotation.",
+    "interpretation": "The clean decimal shift is exactly represented on a 0.1 px grid; the rotated condition remains wrong on a 0.01 px grid.",
+    "own_limitations": "Periodic boundary; one image and noise draw. Rotated-case error measures the translation component, not full geometric alignment.",
+    "citation_ids": [
+      5
+    ]
+  },
+  {
+    "id": "R4",
+    "title": "An appearance rule can fool a registration score",
+    "headers": [
+      "Score optimized",
+      "Selected sampling offset (px)",
+      "Known-offset error (px)"
+    ],
+    "rows": [
+      [
+        "mse",
+        "(+10,+10)",
+        "14.560"
+      ],
+      [
+        "signed_ncc",
+        "(-10,-10)",
+        "17.088"
+      ],
+      [
+        "mi_nats",
+        "(+6,-4)",
+        "0.000"
+      ]
+    ],
+    "caption": "Inverted brightness; true sampling offset=(+6,-4). Every candidate compares the same 3,136 real pixels.",
+    "purpose": "Check why equal brightness and statistical dependence are different registration objectives.",
+    "settings": "32-bin histogram MI; 441 integer (x,y) candidates; same, v->1-v, v->1-v^0.7; 96 px photo.",
+    "interpretation": "MI recovered the known integer shift in all three appearances. Signed NCC and MSE chose wrong shifts after inversion.",
+    "own_limitations": "Teaching adaptation, not Viola/Wells Parzen estimation or optimizer; simulated contrasts are not acquired modalities; bounded translation only.",
+    "citation_ids": [
+      7
+    ]
+  },
+  {
+    "id": "R5",
+    "title": "Changing overlap changes the evidence",
+    "headers": [
+      "Compared area / alignment",
+      "MI (nats)",
+      "NMI (entropy ratio)"
+    ],
+    "rows": [
+      [
+        "96 px crop / offset +8",
+        "2.883",
+        "2.000"
+      ],
+      [
+        "6 px crop / offset +8",
+        "3.024",
+        "2.000"
+      ],
+      [
+        "6 px crop / offset +0",
+        "0.942",
+        "1.194"
+      ],
+      [
+        "both arrays constant",
+        "0.000",
+        "undefined (0 denominator)"
+      ]
+    ],
+    "caption": "NMI=(H(F)+H(M))/H(F,M); 32 bins. Crops change both sample count and foreground content. Flat-pair NMI is undefined.",
+    "purpose": "Observe ordinary and normalized information scores while the compared field of view narrows.",
+    "settings": "128 px camera; widths 96,72,48,24,12,6; height 96; correct offset 8 and wrong offsets 0/16; natural logarithms.",
+    "interpretation": "Exact aligned equal values keep NMI=2 here while MI changes with crop content; wrong alignments also change. No universal advantage follows.",
+    "own_limitations": "A perfect same-contrast relation is an easy special case, not a 3-D multimodal replication or proof of overlap invariance. Crop size and content change together.",
+    "citation_ids": [
+      15
+    ]
+  },
+  {
+    "id": "R6",
+    "title": "Perfect similarity can hide the wrong correspondence",
+    "headers": [
+      "Sampling offset (px)",
+      "MSE / NCC / MI",
+      "Geometric error (px)"
+    ],
+    "rows": [
+      [
+        "+5",
+        "0 / +1 / 0.693",
+        "0"
+      ],
+      [
+        "+13",
+        "0 / +1 / 0.693",
+        "8"
+      ],
+      [
+        "-3",
+        "0 / +1 / 0.693",
+        "8"
+      ]
+    ],
+    "caption": "MI uses nats; NCC has no unit; MSE uses squared brightness units. Period 8 px; known movement +5 px. Equal appearance, different geometry.",
+    "purpose": "Show why a similarity score is not a substitute for an independent geometric answer key.",
+    "settings": "Synthetic periodic dark/bright stripes; period 8; generated shift 5; 41 offsets (-20..20), 2-bin MI.",
+    "interpretation": "Offsets +5, +13 and -3 have identical perfect similarity, but the latter two each miss known physical positions by 8 px.",
+    "own_limitations": "Constructed 2-D counterexample illustrating Rohlfing's warning, not a reproduction of the 3-D clinical experiment or a universal frequency of failure.",
+    "citation_ids": [
+      9
+    ]
+  }
+]

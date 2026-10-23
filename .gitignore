@@ -1,0 +1,31 @@
+# Environments, local configuration and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+# Python/Jupyter caches and rerun output
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+notebooks/reruns/
+# Browser profiles, generated archives and authoring scratch files
+.build/
+qa/
+chrome-profile/
+chrome-*/
+isolated-*/
+slide_previews/
+node_modules/
+*.zip
+*.log
+# Editor, Office and OS temporary files
+.vscode/
+.idea/
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Deliberately retain bundled images, CSV/JSON evidence and notebook outputs.

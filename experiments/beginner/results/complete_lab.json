@@ -1,0 +1,886 @@
+{
+  "schema_version": 1,
+  "scope": "original laboratory explanations, slides 35-52",
+  "synthetic_conditions_on_public_photo": true,
+  "rmse": {
+    "reference": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "other": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "mse": 0.5,
+    "rmse": 0.7071067811865476,
+    "unit": "brightness units; worked example is not restricted to the 0..1 range"
+  },
+  "contrast": {
+    "table": [
+      {
+        "input": 0,
+        "same": 0.0,
+        "inverted": 1.0,
+        "nonlinear_inverted": 1.0
+      },
+      {
+        "input": 0.25,
+        "same": 0.25,
+        "inverted": 0.75,
+        "nonlinear_inverted": 0.6210708583724005
+      },
+      {
+        "input": 0.5,
+        "same": 0.5,
+        "inverted": 0.5,
+        "nonlinear_inverted": 0.38442779332754184
+      },
+      {
+        "input": 0.75,
+        "same": 0.75,
+        "inverted": 0.25,
+        "nonlinear_inverted": 0.1823962318229867
+      },
+      {
+        "input": 1,
+        "same": 1.0,
+        "inverted": 0.0,
+        "nonlinear_inverted": 0.0
+      }
+    ],
+    "same": "v",
+    "inverted": "1-v",
+    "nonlinear_inverted": "1-v**0.7",
+    "input_output_units": "normalized brightness values 0..1",
+    "changes_geometry": false
+  },
+  "residual_example": {
+    "predicted_moving_xy": [
+      13,
+      14
+    ],
+    "claimed_moving_xy": [
+      10,
+      10
+    ],
+    "dx_px": 3,
+    "dy_px": 4,
+    "residual_moving_px": 5,
+    "accepted_at_3px_threshold": false,
+    "separate_arithmetic_example": true
+  },
+  "sampling_example": {
+    "generated_image_shift_x_px": 3,
+    "sampling_offset_u_px": 3,
+    "applied_content_correction_x_px": -3,
+    "equation": "Compare M(p+u) with F(p)."
+  },
+  "fingerprint_toy": {
+    "first_patch": [
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        6,
+        3,
+        8
+      ],
+      [
+        5,
+        0,
+        7
+      ]
+    ],
+    "second_patch": [
+      [
+        1,
+        4,
+        2
+      ],
+      [
+        6,
+        3,
+        8
+      ],
+      [
+        5,
+        7,
+        0
+      ]
+    ],
+    "tests": [
+      {
+        "test": 1,
+        "A_xy": [
+          0,
+          0
+        ],
+        "B_xy": [
+          1,
+          0
+        ],
+        "first_A": 1,
+        "first_B": 4,
+        "second_A": 1,
+        "second_B": 4,
+        "first_bit": 1,
+        "second_bit": 1,
+        "different": false
+      },
+      {
+        "test": 2,
+        "A_xy": [
+          1,
+          0
+        ],
+        "B_xy": [
+          2,
+          0
+        ],
+        "first_A": 4,
+        "first_B": 2,
+        "second_A": 4,
+        "second_B": 2,
+        "first_bit": 0,
+        "second_bit": 0,
+        "different": false
+      },
+      {
+        "test": 3,
+        "A_xy": [
+          0,
+          1
+        ],
+        "B_xy": [
+          1,
+          1
+        ],
+        "first_A": 6,
+        "first_B": 3,
+        "second_A": 6,
+        "second_B": 3,
+        "first_bit": 0,
+        "second_bit": 0,
+        "different": false
+      },
+      {
+        "test": 4,
+        "A_xy": [
+          1,
+          1
+        ],
+        "B_xy": [
+          2,
+          1
+        ],
+        "first_A": 3,
+        "first_B": 8,
+        "second_A": 3,
+        "second_B": 8,
+        "first_bit": 1,
+        "second_bit": 1,
+        "different": false
+      },
+      {
+        "test": 5,
+        "A_xy": [
+          0,
+          2
+        ],
+        "B_xy": [
+          1,
+          2
+        ],
+        "first_A": 5,
+        "first_B": 0,
+        "second_A": 5,
+        "second_B": 7,
+        "first_bit": 0,
+        "second_bit": 1,
+        "different": true
+      },
+      {
+        "test": 6,
+        "A_xy": [
+          1,
+          2
+        ],
+        "B_xy": [
+          2,
+          2
+        ],
+        "first_A": 0,
+        "first_B": 7,
+        "second_A": 7,
+        "second_B": 0,
+        "first_bit": 1,
+        "second_bit": 0,
+        "different": true
+      },
+      {
+        "test": 7,
+        "A_xy": [
+          2,
+          0
+        ],
+        "B_xy": [
+          2,
+          2
+        ],
+        "first_A": 2,
+        "first_B": 7,
+        "second_A": 2,
+        "second_B": 0,
+        "first_bit": 1,
+        "second_bit": 0,
+        "different": true
+      },
+      {
+        "test": 8,
+        "A_xy": [
+          0,
+          0
+        ],
+        "B_xy": [
+          0,
+          2
+        ],
+        "first_A": 1,
+        "first_B": 5,
+        "second_A": 1,
+        "second_B": 5,
+        "first_bit": 1,
+        "second_bit": 1,
+        "different": false
+      }
+    ],
+    "first_bits": "10010111",
+    "second_bits": "10011001",
+    "hamming_distance": 3,
+    "notice": "Illustrated 8-test BRIEF-like toy only; not OpenCV's true 256-test pattern, smoothing, orientation or scale handling."
+  },
+  "orb": {
+    "status": "measured",
+    "library": "OpenCV",
+    "opencv_version": "4.11.0",
+    "seed": 20261022,
+    "image_shape_hw": [
+      384,
+      384
+    ],
+    "image_provenance": "CC0 public camera photograph; generated geometric transform",
+    "settings": {
+      "nfeatures_max": 1200,
+      "WTA_K": 2,
+      "descriptor_bytes": 32,
+      "descriptor_bits": 256,
+      "distance": "Hamming",
+      "ratio_cutoff": 0.75,
+      "forward_ransac_threshold_moving_px": 3.0,
+      "fit_model": "similarity: isotropic scale + rotation + x/y translation",
+      "max_iterations": 3000,
+      "confidence": 0.99,
+      "refine_iterations": 10
+    },
+    "generated_transform": {
+      "rotation_degrees_opencv": 6.0,
+      "scale": 1.03,
+      "added_translation_xy_px": [
+        14,
+        -10
+      ],
+      "rotation_scale_center_xy": [
+        192.0,
+        192.0
+      ]
+    },
+    "counts": {
+      "fixed_keypoints": 1169,
+      "moving_keypoints": 1170,
+      "two_neighbor_queries": 1169,
+      "ratio_pass_matches": 789,
+      "ransac_inliers": 750,
+      "ransac_rejections": 39,
+      "final_refit_residual_within_3px": 763,
+      "returned_inliers_final_residual_above_3px": 5,
+      "returned_outliers_final_residual_within_3px": 18
+    },
+    "mask_note": "Returned RANSAC mask records the voting stage. The final least-squares adjustment changes the model: some borderline final residuals cross the 3 px ruler. Keep returned-mask membership separate from final residual<=3.",
+    "known_forward_fixed_to_moving": [
+      [
+        1.0243575522293216,
+        0.10766431716568307,
+        -11.34819892384089
+      ],
+      [
+        -0.10766431716568307,
+        1.0243575522293216,
+        5.994898867781409
+      ]
+    ],
+    "estimated_forward_fixed_to_moving": [
+      [
+        1.0244876558882776,
+        0.10745515697108658,
+        -11.244377041068168
+      ],
+      [
+        -0.10745515697108658,
+        1.0244876558882776,
+        5.838925147433403
+      ]
+    ],
+    "estimated_inverse_moving_to_fixed": [
+      [
+        0.9654762347222133,
+        -0.10126564215551925,
+        11.447461311960248
+      ],
+      [
+        0.10126564215551925,
+        0.9654762347222133,
+        -4.498674404466301
+      ]
+    ],
+    "independent_check": {
+      "number_of_points": 25,
+      "coordinate_system": "fixed-image pixels",
+      "fixed_points": [
+        [
+          64.0,
+          64.0
+        ],
+        [
+          128.0,
+          64.0
+        ],
+        [
+          192.0,
+          64.0
+        ],
+        [
+          256.0,
+          64.0
+        ],
+        [
+          320.0,
+          64.0
+        ],
+        [
+          64.0,
+          128.0
+        ],
+        [
+          128.0,
+          128.0
+        ],
+        [
+          192.0,
+          128.0
+        ],
+        [
+          256.0,
+          128.0
+        ],
+        [
+          320.0,
+          128.0
+        ],
+        [
+          64.0,
+          192.0
+        ],
+        [
+          128.0,
+          192.0
+        ],
+        [
+          192.0,
+          192.0
+        ],
+        [
+          256.0,
+          192.0
+        ],
+        [
+          320.0,
+          192.0
+        ],
+        [
+          64.0,
+          256.0
+        ],
+        [
+          128.0,
+          256.0
+        ],
+        [
+          192.0,
+          256.0
+        ],
+        [
+          256.0,
+          256.0
+        ],
+        [
+          320.0,
+          256.0
+        ],
+        [
+          64.0,
+          320.0
+        ],
+        [
+          128.0,
+          320.0
+        ],
+        [
+          192.0,
+          320.0
+        ],
+        [
+          256.0,
+          320.0
+        ],
+        [
+          320.0,
+          320.0
+        ]
+      ],
+      "true_moving_points": [
+        [
+          61.101200717439404,
+          64.66326591185427
+        ],
+        [
+          126.66008406011599,
+          57.772749613250554
+        ],
+        [
+          192.21896740279257,
+          50.88223331464684
+        ],
+        [
+          257.77785074546915,
+          43.99171701604312
+        ],
+        [
+          323.33673408814576,
+          37.101200717439404
+        ],
+        [
+          67.99171701604311,
+          130.22214925453085
+        ],
+        [
+          133.5506003587197,
+          123.33163295592715
+        ],
+        [
+          199.10948370139627,
+          116.44111665732342
+        ],
+        [
+          264.6683670440729,
+          109.55060035871969
+        ],
+        [
+          330.2272503867495,
+          102.66008406011599
+        ],
+        [
+          74.88223331464684,
+          195.78103259720743
+        ],
+        [
+          140.44111665732342,
+          188.89051629860373
+        ],
+        [
+          206.0,
+          182.0
+        ],
+        [
+          271.5588833426766,
+          175.1094837013963
+        ],
+        [
+          337.1177666853532,
+          168.21896740279257
+        ],
+        [
+          81.77274961325057,
+          261.339915939884
+        ],
+        [
+          147.33163295592712,
+          254.4493996412803
+        ],
+        [
+          212.8905162986037,
+          247.55888334267658
+        ],
+        [
+          278.4493996412803,
+          240.66836704407288
+        ],
+        [
+          344.0082829839569,
+          233.77785074546915
+        ],
+        [
+          88.66326591185427,
+          326.8987992825606
+        ],
+        [
+          154.22214925453085,
+          320.00828298395686
+        ],
+        [
+          219.78103259720743,
+          313.11776668535316
+        ],
+        [
+          285.339915939884,
+          306.22725038674946
+        ],
+        [
+          350.8987992825606,
+          299.33673408814576
+        ]
+      ],
+      "recovered_points": [
+        [
+          63.89105137120282,
+          64.11962442007679
+        ],
+        [
+          127.88436777124423,
+          64.10585710950375
+        ],
+        [
+          191.8776841712856,
+          64.0920897989307
+        ],
+        [
+          255.871000571327,
+          64.07832248835766
+        ],
+        [
+          319.86431697136845,
+          64.06455517778463
+        ],
+        [
+          63.90481868177585,
+          128.11294082011818
+        ],
+        [
+          127.89813508181724,
+          128.09917350954515
+        ],
+        [
+          191.89145148185864,
+          128.0854061989721
+        ],
+        [
+          255.88476788190007,
+          128.07163888839906
+        ],
+        [
+          319.8780842819415,
+          128.05787157782603
+        ],
+        [
+          63.91858599234891,
+          192.10625722015956
+        ],
+        [
+          127.9119023923903,
+          192.09248990958653
+        ],
+        [
+          191.90521879243167,
+          192.0787225990135
+        ],
+        [
+          255.8985351924731,
+          192.06495528844047
+        ],
+        [
+          319.8918515925145,
+          192.05118797786741
+        ],
+        [
+          63.93235330292195,
+          256.09957362020094
+        ],
+        [
+          127.92566970296333,
+          256.0858063096279
+        ],
+        [
+          191.9189861030047,
+          256.0720389990549
+        ],
+        [
+          255.91230250304613,
+          256.05827168848185
+        ],
+        [
+          319.90561890308754,
+          256.04450437790877
+        ],
+        [
+          63.94612061349497,
+          320.09289002024235
+        ],
+        [
+          127.93943701353636,
+          320.07912270966926
+        ],
+        [
+          191.93275341357776,
+          320.06535539909623
+        ],
+        [
+          255.92606981361914,
+          320.0515880885232
+        ],
+        [
+          319.9193862136606,
+          320.0378207779502
+        ]
+      ],
+      "per_point_error_px": [
+        0.16180174781347004,
+        0.1567690656970147,
+        0.15310680266136223,
+        0.15091475998224552,
+        0.15025729678599298,
+        0.14769939806192378,
+        0.1421683739510376,
+        0.13811951206671183,
+        0.13568556066453327,
+        0.13495392484028987,
+        0.1338612620508626,
+        0.12773242282943345,
+        0.12321008442311819,
+        0.1204752948236894,
+        0.11965068792030341,
+        0.12037849253704153,
+        0.11352407599060359,
+        0.10841064934403209,
+        0.10529216803969431,
+        0.10434764543316162,
+        0.10738502759129323,
+        0.09964074726135526,
+        0.09377329884605849,
+        0.09014989370923907,
+        0.08904489762325024
+      ],
+      "mean_error_px": 0.12513412363790874,
+      "maximum_error_px": 0.16180174781347004,
+      "used_for_fitting": false
+    },
+    "image_rmse": {
+      "brightness_scale": "0..1",
+      "common_valid_pixels": 127350,
+      "before": 0.1853080601599123,
+      "estimated_inverse": 0.017196045236897155,
+      "known_inverse_oracle": 0.01641429733702259,
+      "note": "Same valid pixel mask for all three. Bilinear resampling can leave brightness error even with the exact known inverse."
+    },
+    "fingerprint_example": {
+      "match_id": 1,
+      "query_idx": 1,
+      "train_idx": 46,
+      "fixed_bytes": [
+        98,
+        168,
+        129,
+        56,
+        141,
+        237,
+        192,
+        206,
+        203,
+        177,
+        160,
+        9,
+        162,
+        248,
+        69,
+        26,
+        201,
+        235,
+        104,
+        17,
+        14,
+        107,
+        218,
+        177,
+        153,
+        214,
+        85,
+        123,
+        208,
+        88,
+        82,
+        14
+      ],
+      "moving_bytes": [
+        98,
+        168,
+        129,
+        24,
+        141,
+        229,
+        192,
+        202,
+        203,
+        49,
+        168,
+        9,
+        162,
+        200,
+        116,
+        26,
+        201,
+        235,
+        106,
+        17,
+        26,
+        107,
+        218,
+        49,
+        153,
+        22,
+        149,
+        58,
+        208,
+        105,
+        242,
+        166
+      ],
+      "fixed_bits": "0110001010101000100000010011100010001101111011011100000011001110110010111011000110100000000010011010001011111000010001010001101011001001111010110110100000010001000011100110101111011010101100011001100111010110010101010111101111010000010110000101001000001110",
+      "moving_bits": "0110001010101000100000010001100010001101111001011100000011001010110010110011000110101000000010011010001011001000011101000001101011001001111010110110101000010001000110100110101111011010001100011001100100010110100101010011101011010000011010011111001010100110",
+      "different_bit_positions_zero_based": [
+        26,
+        44,
+        61,
+        72,
+        84,
+        106,
+        107,
+        114,
+        115,
+        119,
+        150,
+        163,
+        165,
+        184,
+        200,
+        201,
+        208,
+        209,
+        217,
+        223,
+        234,
+        235,
+        239,
+        240,
+        242,
+        248,
+        250,
+        252
+      ],
+      "full_256_bit_hamming": 28,
+      "first_16_bit_hamming": 0,
+      "note": "Actual OpenCV bytes, unpacked most-significant bit first for display; toy comparisons do not claim this internal layout."
+    },
+    "threshold_sweep": [
+      {
+        "threshold_moving_px": 0.5,
+        "inlier_count": 191,
+        "independent_mean_fixed_px": 0.26016558689405145
+      },
+      {
+        "threshold_moving_px": 1,
+        "inlier_count": 381,
+        "independent_mean_fixed_px": 0.4925093133155808
+      },
+      {
+        "threshold_moving_px": 2,
+        "inlier_count": 649,
+        "independent_mean_fixed_px": 0.229094034224674
+      },
+      {
+        "threshold_moving_px": 3,
+        "inlier_count": 750,
+        "independent_mean_fixed_px": 0.12513412363790874
+      },
+      {
+        "threshold_moving_px": 5,
+        "inlier_count": 783,
+        "independent_mean_fixed_px": 0.18296126066943338
+      },
+      {
+        "threshold_moving_px": 10,
+        "inlier_count": 776,
+        "independent_mean_fixed_px": 0.17453976638735388
+      }
+    ],
+    "blank_failure": {
+      "example": "64x64 blank black picture",
+      "keypoint_count": 0,
+      "descriptor_count": 0,
+      "outcome": "cannot register from ORB: no distinctive places; no transform or success score invented"
+    },
+    "images": {
+      "source": "data/camera.png",
+      "fixed": "data/complete_fixed.png",
+      "moving": "data/complete_moving.png",
+      "registered": "data/complete_registered.png",
+      "oracle": "data/complete_oracle.png",
+      "common_valid_mask": "data/complete_common_valid_mask.png"
+    },
+    "trace_path": "results/complete_orb_trace.json",
+    "browser_trace_path": "results/complete_orb_browser.json"
+  },
+  "figures": {
+    "rmse_steps": "figures/complete_rmse_steps.png",
+    "contrast_modes": "figures/complete_contrast_modes.png",
+    "orb_keypoints": "figures/complete_orb_keypoints.png",
+    "orb_matches": "figures/complete_orb_matches.png",
+    "fingerprints": "figures/complete_fingerprints.png",
+    "residual_vs_check": "figures/complete_residual_vs_check.png",
+    "orb_thresholds": "figures/complete_orb_thresholds.png",
+    "transform_steps": "figures/complete_transform_steps.png"
+  },
+  "provenance": {
+    "numpy_version": "1.26.4",
+    "opencv_version": "4.11.0",
+    "camera_sha256": "4cfbba3559df4e7d6765b5aac6e8cd5d3309f728f3eb35e155e644c48a6fcca7",
+    "camera_license": "CC0",
+    "camera_credit": "Lav Varshney via scikit-image",
+    "source_url": "https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.camera"
+  },
+  "validation": {
+    "status": "passed",
+    "topics": [
+      "RMSE arithmetic",
+      "exact original nonlinear rule",
+      "actual descriptor bit count",
+      "blank no-feature failure",
+      "ratio matching and fit",
+      "25 independent unused checks",
+      "known inverse round trip"
+    ]
+  }
+}

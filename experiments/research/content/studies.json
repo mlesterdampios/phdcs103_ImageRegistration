@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0",
+  "verification_date": "2026-10-23",
+  "status": "verified_with_explicit_access_boundaries",
+  "scope": "Six published research connections for Parts I–VI. The classroom cases are bounded method reimplementations, adaptations, or concept illustrations; none is a full replication of an original paper's complete benchmark.",
+  "gap_policy": "A gap means a stated limitation, an assumption to test, or an unanswered question within this classroom setup. No claim of an unresolved or novel literature gap is made.",
+  "studies": [
+    {
+      "id": "R1",
+      "part": "I",
+      "part_title": "Foundations and transformation models",
+      "reference_id": 13,
+      "title": "Least-Squares Estimation of Transformation Parameters Between Two Point Patterns",
+      "authors": [
+        "Shinji Umeyama"
+      ],
+      "year": 1991,
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "volume": "13",
+      "issue": "4",
+      "pages": "376–380",
+      "doi": "10.1109/34.88573",
+      "url": "https://doi.org/10.1109/34.88573",
+      "full_text_url": "https://web.stanford.edu/class/cs273/refs/umeyama.pdf",
+      "verification_status": "Crossref metadata and all five scanned paper pages verified; relevant equations inspected visually.",
+      "purpose": "Explain how corresponding point coordinates determine a rotation, translation, and common scale.",
+      "core_claim": "For paired point patterns and the stated rank conditions, a closed-form singular-value-decomposition solution minimizes squared correspondence error while enforcing a proper rotation rather than a reflection.",
+      "method": "Subtract each point set's centroid, form the cross-covariance, compute its SVD, enforce determinant +1, then recover common scale and translation.",
+      "evidence": [
+        {
+          "locator": "p. 377, Section I, Eq. (1)",
+          "supports": "The least-squares objective uses paired points and a similarity transform."
+        },
+        {
+          "locator": "p. 378, Section II, theorem and Eqs. (32)–(43)",
+          "supports": "Centroids, covariance, scale, rotation and translation; rank/uniqueness condition."
+        },
+        {
+          "locator": "pp. 379–380, Section III and Figs. 1–3; Section IV",
+          "supports": "Numerical example distinguishes a zero-error reflection from a constrained proper rotation."
+        }
+      ],
+      "adaptation_type": "bounded_library_method_reimplementation",
+      "adaptation": "Use 16 known 2D correspondences under one known similarity transform. Compare spatially spread versus tightly clustered fitting layouts at localization-noise sigma 0, 0.5, and 2 pixels, reusing fixed normal draws. Fit the SVD solution and check 25 separate points. Also retain a coincident-point degeneracy failure.",
+      "not_reproduced": [
+        "The complete original numerical analysis or comparison with every earlier method",
+        "Automatic discovery of point correspondences",
+        "Clinical or multi-scene image registration"
+      ],
+      "documented_limitation": "The theorem operates on given paired point patterns and states rank conditions for uniqueness. It solves the least-squares objective; it does not assert robust recovery of the true transform from arbitrary incorrect correspondences.",
+      "limitation_locator": "p. 378, theorem and rank condition; p. 380, Section IV",
+      "classroom_extension": "Measure how localization noise and the spatial spread of fitting points affect independent geometric recovery. This conditioning question is the researcher's classroom extension, not an unresolved problem claimed by Umeyama. Incorrect correspondences are not tested in this run.",
+      "testable_question": "With the same coordinate-noise draws, does fitting widely spread points or tightly clustered points give the smaller error at independent points?",
+      "primary_metric": "Mean Euclidean error at independent check points, pixels; lower is better.",
+      "can_conclude": "Whether this implementation recovers the constructed similarity under the recorded point layout and perturbation settings.",
+      "cannot_conclude": "That least squares rejects outliers, discovers correct correspondences, or generalizes to arbitrary image pairs.",
+      "anchor_text": "Umeyama (1991) supplies the point-based least-squares foundation. The classroom test asks how imperfect correspondences affect an independent ruler check.",
+      "slide_mapping": {
+        "original_main": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "beginner_main": [
+          6,
+          7,
+          21,
+          22,
+          49
+        ],
+        "original_research": [
+          33,
+          34
+        ],
+        "beginner_research": [
+          53,
+          54
+        ]
+      },
+      "limitation_origin": "paper_assumptions_and_rank_condition; classroom conditioning extension is separate"
+    },
+    {
+      "id": "R2",
+      "part": "II",
+      "part_title": "Feature-based registration",
+      "reference_id": 14,
+      "supporting_reference_ids": [
+        3
+      ],
+      "title": "ORB: An efficient alternative to SIFT or SURF",
+      "authors": [
+        "Ethan Rublee",
+        "Vincent Rabaud",
+        "Kurt Konolige",
+        "Gary Bradski"
+      ],
+      "year": 2011,
+      "venue": "2011 International Conference on Computer Vision",
+      "pages": "2564–2571",
+      "doi": "10.1109/ICCV.2011.6126544",
+      "url": "https://doi.org/10.1109/ICCV.2011.6126544",
+      "full_text_url": "https://gaoyichao.com/Xiaotu/papers/2011%20-%20ORB%20an%20efficient%20alternative%20to%20SIFT%20or%20SURF%20-%20Rublee%20et%20al.pdf",
+      "verification_status": "Original published paper PDF retrieved from a public mirror; first-page identity and relevant application, benchmark, and conclusion passages inspected. Crossref metadata agrees.",
+      "purpose": "Connect real local-feature detection and binary matching to an understandable image-alignment pipeline.",
+      "core_claim": "ORB combines oriented FAST keypoints with a rotated, learned binary descriptor to obtain an efficient feature method; the original paper evaluates its matching behavior on its own experiments.",
+      "method": "Detect ORB keypoints, compute default binary descriptors, match with Hamming distance, filter ambiguous pairs, then fit a similarity correction with RANSAC.",
+      "evidence": [
+        {
+          "locator": "p. 2564, abstract and Section 1",
+          "supports": "Oriented FAST and rotated binary descriptor; matching and efficiency motivation."
+        },
+        {
+          "locator": "pp. 2569-2570, Sections 6.1-6.3",
+          "supports": "Original CPU benchmarks and applications differ from this classroom alignment test; the phone tracking example assumes a planar, well-textured keyframe surface."
+        }
+      ],
+      "adaptation_type": "bounded_pipeline_adaptation",
+      "adaptation": "Run actual Python/OpenCV ORB and RANSAC on a 256 x 256 public photograph under four rotations (0, 15, 45, 75 degrees) and three moving-image blur settings (sigma 0, 1.5, 3 pixels). Replay saved real descriptors, matches, and fitted transforms in the browser. Fit in the forward fixed-to-moving direction and separately evaluate an inverse independent-point check.",
+      "not_reproduced": [
+        "Re-training the learned rBRIEF test pattern",
+        "Original descriptor benchmark datasets and complete comparisons with SIFT/SURF",
+        "Original smartphone implementation or hardware speed claims"
+      ],
+      "documented_limitation": "The specific phone-tracking application in Section 6.3 assumes a planar surface with sufficient texture. This is an application assumption, not a statement that every ORB use is planar. The original comparative timings describe its own implementation and hardware.",
+      "limitation_locator": "p. 2570, Sections 6.1 and 6.3",
+      "classroom_extension": "Vary controlled rotation and blur, then compare support counts with independent geometric error. Blur sensitivity under these settings is a classroom extension; the researcher does not claim it is a new unresolved gap or a quoted conclusion of the ORB paper.",
+      "testable_question": "How do rotation and blur change usable match support and independent geometric error in this particular ORB-plus-RANSAC pipeline?",
+      "primary_metric": "Independent mean point error in pixels; match and inlier counts are supporting diagnostics.",
+      "can_conclude": "How the chosen ORB-plus-RANSAC pipeline behaves on the recorded controlled transformations.",
+      "cannot_conclude": "That the original paper's comparative speed or descriptor rankings have been replicated, or that feature counts certify correct geometry.",
+      "anchor_text": "Rublee et al. (2011) explain the ORB feature method. This adaptation checks a complete alignment pipeline while separating match support from independent accuracy.",
+      "slide_mapping": {
+        "original_main": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "beginner_main": [
+          21,
+          24,
+          25,
+          27,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ],
+        "original_research": [
+          35,
+          36
+        ],
+        "beginner_research": [
+          55,
+          56
+        ]
+      },
+      "limitation_origin": "explicit_application_assumption_and_benchmark_scope"
+    },
+    {
+      "id": "R3",
+      "part": "III",
+      "part_title": "Intensity-based translation registration",
+      "reference_id": 5,
+      "title": "Efficient subpixel image registration algorithms",
+      "authors": [
+        "Manuel Guizar-Sicairos",
+        "Samuel T. Thurman",
+        "James R. Fienup"
+      ],
+      "year": 2008,
+      "venue": "Optics Letters",
+      "volume": "33",
+      "issue": "2",
+      "pages": "156–158",
+      "doi": "10.1364/OL.33.000156",
+      "url": "https://doi.org/10.1364/OL.33.000156",
+      "full_text_url": "https://sites.rochester.edu/fienup/wp-content/uploads/2019/07/MGS_OL08_EffRegistration.pdf",
+      "verification_status": "Original three-page paper retrieved from the author group publication site and read; metadata independently verified.",
+      "purpose": "Show how translation can be estimated between pixel centers and why numerical sampling precision differs from actual recovery accuracy.",
+      "core_claim": "The paper develops efficient 2D translation-registration algorithms, including local matrix-multiply DFT refinement, with accuracy comparable to conventional FFT upsampling at lower computation and memory cost in the reported experiments.",
+      "method": "Estimate a correlation peak and refine its local sampling with an upsampled DFT, using the established scikit-image implementation.",
+      "evidence": [
+        {
+          "locator": "p. 156, opening paragraphs and Eqs. (1)-(3)",
+          "supports": "Translation-only formulation, normalized reconstruction error, and Fourier-domain cross-correlation."
+        },
+        {
+          "locator": "p. 157, single-step/two-step DFT descriptions and Fig. 1",
+          "supports": "Local upsampled-DFT refinement and explicit statement that noise ultimately limits registration accuracy."
+        },
+        {
+          "locator": "p. 158, closing discussion and Fig. 2",
+          "supports": "Original hardware-specific timings; phase correlation and window functions are described as extensions."
+        }
+      ],
+      "adaptation_type": "bounded_library_method_reimplementation",
+      "adaptation": "Use a periodic Fourier-generated fractional translation, upsampling factors 1, 10, and 100, and the public scikit-image implementation with normalization=None. Compare clean, noisy, occluded, and extra-rotation cases. In the rotation-violating case, the reported scalar checks the translation component only; it is not a measure of complete geometric recovery.",
+      "not_reproduced": [
+        "All three original algorithms and their complete optimization comparisons",
+        "Original hardware timings or memory benchmarks",
+        "General rotation, scale, deformation, or clinical registration"
+      ],
+      "documented_limitation": "The problem is translation registration; p. 157 explicitly identifies noise as an eventual accuracy limit. The paper discusses phase correlation and windowing as extensions, so an implementation using those settings must be labeled accordingly.",
+      "limitation_locator": "p. 156, opening scope; p. 157, Fig. 1 discussion; p. 158, closing discussion",
+      "classroom_extension": "Separate upsampling factor from measured displacement error and show whether gains plateau under the controlled image-generation process.",
+      "testable_question": "Does increasing the upsampling factor always reduce the measured translation error?",
+      "primary_metric": "Euclidean error of the recovered translation component in pixels; lower is better. Complete geometric accuracy is not established for the extra-rotation case.",
+      "can_conclude": "How numerical refinement behaves for these constructed fractional translations and preprocessing settings.",
+      "cannot_conclude": "That 1/upsample_factor pixels is guaranteed accuracy, or that original runtime advantages have been reproduced.",
+      "anchor_text": "Guizar-Sicairos et al. (2008) support efficient subpixel translation. The extra experiment distinguishes a finer search grid from a more accurate answer.",
+      "slide_mapping": {
+        "original_main": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "beginner_main": [
+          35,
+          49,
+          50,
+          51
+        ],
+        "original_research": [
+          37,
+          38
+        ],
+        "beginner_research": [
+          57,
+          58
+        ]
+      },
+      "limitation_origin": "explicit_scope_and_accuracy_limit"
+    },
+    {
+      "id": "R4",
+      "part": "IV",
+      "part_title": "Multimodal and different-contrast registration",
+      "reference_id": 7,
+      "title": "Alignment by Maximization of Mutual Information",
+      "authors": [
+        "Paul Viola",
+        "William M. Wells III"
+      ],
+      "year": 1997,
+      "venue": "International Journal of Computer Vision",
+      "volume": "24",
+      "issue": "2",
+      "pages": "137–154",
+      "doi": "10.1023/A:1007958904918",
+      "url": "https://doi.org/10.1023/A:1007958904918",
+      "full_text_url": "https://cs.uwaterloo.ca/~mannr/cs886-w10/ViolaWells_IJCV.pdf",
+      "verification_status": "Original journal paper retrieved; MI formulation, Parzen estimator, stochastic optimizer, MRI example, and single-view limitation checked.",
+      "purpose": "Explain why corresponding structures can be aligned without requiring equal brightness values.",
+      "core_claim": "Alignment can be formulated by maximizing statistical dependence between model and image intensities; the paper uses nonparametric density estimation and stochastic optimization and reports MRI and vision experiments.",
+      "method": "Estimate joint and marginal intensity distributions and choose a transformation that increases their mutual information.",
+      "evidence": [
+        {
+          "locator": "pp. 143-144, Sections 4-5, especially Eq. (13)",
+          "supports": "Mutual-information alignment formulation."
+        },
+        {
+          "locator": "pp. 145-146, Sections 5.1-5.2.1",
+          "supports": "Parzen-window density estimation and a local stochastic maximization procedure, unlike the class histogram grid search."
+        },
+        {
+          "locator": "p. 147, Section 6.1 and Fig. 8",
+          "supports": "Original PD/T2 double-echo MRI example, synthetic nonlinear intensity change, and acknowledgement that normalized correlation could work for the relatively similar original MRI pair."
+        },
+        {
+          "locator": "pp. 150-151, Sections 6.3-6.3.1, Figs. 12-14",
+          "supports": "A single-view relation can be insufficient; the paper develops a multiview construction."
+        }
+      ],
+      "adaptation_type": "bounded_metric_adaptation",
+      "adaptation": "Use a 96 x 96 public photograph, a known (+6, -4)-pixel forward displacement, and three explicitly simulated intensity rules: v, 1-v, and 1-v^0.7. Compare MSE, signed NCC, and 32-bin histogram MI at all 441 integer sampling offsets in [-10,10]^2 on the same 3,136 source-valid fixed pixels. Convert the selected sampling offset to the opposite-sign point correction.",
+      "not_reproduced": [
+        "The original EMMA Parzen-density stochastic-gradient optimizer",
+        "Original MRI subjects, head models, or view-based recognition experiments",
+        "A clinical validation or a real CT/MRI acquisition from the remapped photograph"
+      ],
+      "documented_limitation": "The paper's single-view model can fail when the aligned model and image lack a consistent relationship; it then develops a multiview construction. Its local optimization also requires an initialization and has a finite capture range in the reported examples.",
+      "limitation_locator": "p. 150, Section 6.3, Figs. 12–13; p. 151, Section 6.3.1",
+      "classroom_extension": "Test several clearly labeled intensity mappings and inspect both the metric optimum and independent geometry; do not assume that MI succeeds for every transformation or image relationship.",
+      "testable_question": "Which tested contrast changes preserve enough statistical dependence for the bounded MI search to select the known correction?",
+      "primary_metric": "Independent correction error in pixels; MI is supporting dependence in nats, not an accuracy percentage.",
+      "can_conclude": "Whether the tested metric and search recover the introduced shift under each controlled remapping.",
+      "cannot_conclude": "That MI always works across modalities, that the original optimizer has been replicated, or that simulated contrast represents a genuine medical acquisition.",
+      "anchor_text": "Viola and Wells (1997) connect alignment to statistical dependence. This simplified experiment tests the idea while exposing its assumptions.",
+      "slide_mapping": {
+        "original_main": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "beginner_main": [
+          14,
+          15,
+          16,
+          18,
+          19,
+          39,
+          40,
+          41
+        ],
+        "original_research": [
+          39,
+          40
+        ],
+        "beginner_research": [
+          59,
+          60
+        ]
+      },
+      "limitation_origin": "explicit_single_view_limitation_and_local_optimizer_scope"
+    },
+    {
+      "id": "R5",
+      "part": "V",
+      "part_title": "Failure cases, overlap, and practical workflow",
+      "reference_id": 15,
+      "title": "An overlap invariant entropy measure of 3D medical image alignment",
+      "authors": [
+        "Colin Studholme",
+        "Derek L. G. Hill",
+        "David J. Hawkes"
+      ],
+      "year": 1999,
+      "venue": "Pattern Recognition",
+      "volume": "32",
+      "issue": "1",
+      "pages": "71–86",
+      "doi": "10.1016/S0031-3203(98)00091-0",
+      "url": "https://doi.org/10.1016/S0031-3203(98)00091-0",
+      "full_text_url": null,
+      "verification_status": "Original bibliographic identity verified through Crossref and publisher metadata. Original 1999 full text was unavailable through accessible sources in this run; no uninspected original-paper equation or page locator is claimed. Formula, historical attribution, and a counterexample are verified in the full primary 2008 follow-up by Cahill et al.",
+      "purpose": "Make the amount of shared image content a visible part of registration design rather than treating every similarity value as directly comparable.",
+      "core_claim": "The paper introduces normalized mutual information to reduce sensitivity to changing image overlap in the registration setting it studies. Its title is not a guarantee that every empirical histogram, crop, or image pair will be invariant.",
+      "method": "Compute NMI=(H(F)+H(M))/H(F,M) on paired overlapping intensities, with the same histogram convention throughout a comparison.",
+      "evidence": [
+        {
+          "locator": "Original publisher/Crossref record: Pattern Recognition 32(1), pp. 71-86, DOI 10.1016/S0031-3203(98)00091-0",
+          "supports": "Exact original paper identity, authors, venue, date and contribution topic."
+        },
+        {
+          "locator": "Cahill et al. (2008), PDF p. 1, abstract and Section 1; p. 2, Eq. (4)",
+          "supports": "Attributes NMI to Studholme et al. and states the formula (H(A)+H(B))/H(A,B)."
+        },
+        {
+          "locator": "Cahill et al. (2008), PDF pp. 1-3, Section 2, Figs. 1-2",
+          "supports": "Published disc/ring counterexample where ordinary NMI is not overlap invariant."
+        },
+        {
+          "locator": "Cahill et al. (2008), PDF p. 2, Section 3; p. 7, Section 6",
+          "supports": "Modified invariance claims require common-background-statistics assumptions; the authors identify broader initialization tests and assumption checks as future work at that time."
+        }
+      ],
+      "adaptation_type": "bounded_2d_metric_adaptation",
+      "adaptation": "Use a 128-pixel public photograph with a known horizontal sampling offset of 8 pixels. Evaluate only three offsets (0, 8, and 16 pixels) at six crop widths (96, 72, 48, 24, 12, and 6 pixels), using real source content and a 32-bin histogram. Record the sample count and MI/NMI at each crop. This is a three-candidate comparison, not a full registration search.",
+      "not_reproduced": [
+        "The original 3D medical images and complete registration protocol",
+        "Original scanner, patient, or clinical accuracy results",
+        "A theorem guaranteeing successful alignment under arbitrary crop or overlap"
+      ],
+      "documented_limitation": "The later primary analysis by Cahill et al. supplies a counterexample to universal overlap invariance of ordinary NMI. Its modified measures obtain invariance only under stated background-statistics assumptions. This is a published follow-up finding, not a quotation attributed to the 1999 authors.",
+      "limitation_locator": "Cahill et al. (2008), Section 2 and Figs. 1-2; Section 3 assumptions; Section 6 conclusions",
+      "classroom_extension": "Ask how crop width changes the correct-versus-wrong candidate score ordering; allow MI and NMI to tie or behave similarly. Cropping changes scene composition and sample count together, so the experiment does not isolate sample count alone.",
+      "testable_question": "As crop width shrinks, do MI and NMI still score the known 8-pixel sampling offset above the two tested wrong offsets?",
+      "primary_metric": "MI in nats and dimensionless NMI for three known candidates, with crop width and sample count. No full-search optimum is claimed.",
+      "can_conclude": "How the score ordering of these three tested offsets changes across the chosen crops and sample counts.",
+      "cannot_conclude": "That NMI always outperforms MI, that normalization creates missing information, or that a bounded class run reproduces the original medical benchmark.",
+      "anchor_text": "Studholme et al. (1999) address changing overlap with normalized mutual information. The classroom question is when shrinking common content still supports a reliable answer.",
+      "slide_mapping": {
+        "original_main": [
+          21,
+          22
+        ],
+        "beginner_main": [
+          20,
+          30,
+          49
+        ],
+        "original_research": [
+          41,
+          42
+        ],
+        "beginner_research": [
+          61,
+          62
+        ]
+      },
+      "supporting_reference_ids": [
+        16
+      ],
+      "limitation_origin": "published_follow_up_finding; original_1999_full_text_not_inspected"
+    },
+    {
+      "id": "R6",
+      "part": "VI",
+      "part_title": "Evaluation and interpretation",
+      "reference_id": 9,
+      "title": "Image Similarity and Tissue Overlaps as Surrogates for Image Registration Accuracy: Widely Used but Unreliable",
+      "authors": [
+        "Torsten Rohlfing"
+      ],
+      "year": 2012,
+      "venue": "IEEE Transactions on Medical Imaging",
+      "volume": "31",
+      "issue": "2",
+      "pages": "153–163",
+      "doi": "10.1109/TMI.2011.2163944",
+      "url": "https://doi.org/10.1109/TMI.2011.2163944",
+      "full_text_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3274625/",
+      "verification_status": "Original full article checked through PubMed Central HTML and the official NCBI BioC full-text endpoint; journal issue year is 2012 (not repository availability year).",
+      "purpose": "Show why an image-based score should not be described as a direct measurement of geometric accuracy.",
+      "core_claim": "The paper constructs highly inaccurate nonrigid mappings that perform well on widely used similarity and tissue-overlap surrogates, demonstrating that such scores alone can mislead evaluation.",
+      "method": "The original work uses deliberately implausible rank-based image mappings to test surrogate criteria against anatomical correspondence.",
+      "evidence": [
+        {
+          "locator": "Section II.A-B and Fig. 2",
+          "supports": "18 modified IBSR T1-weighted MR images and the rank-based CURT construction."
+        },
+        {
+          "locator": "Section III.A-E",
+          "supports": "Similarity, tissue overlap, localized-region overlap, inverse-consistency results, and summary."
+        },
+        {
+          "locator": "Section IV.B, Limitations of This Study",
+          "supports": "CURT is limited to same-modality experiments; known-deformation tests quantify actual error but do not establish accuracy between independent acquired images."
+        },
+        {
+          "locator": "Section IV.C, Recommendations and Caveats",
+          "supports": "Geometric distance measures and evaluation as independent as possible from fitting."
+        }
+      ],
+      "adaptation_type": "concept_illustration",
+      "adaptation": "Use periodic binary stripes with period 8 pixels and a known 5-pixel horizontal sampling offset. Compare the correct offset +5 with wrong lookalikes +13 and -3: their intensity arrays match, but independent point positions differ by one period. Periodic wrap is explicit.",
+      "not_reproduced": [
+        "The original CURT algorithm",
+        "Original nonrigid brain-registration experiments or tissue-label benchmark",
+        "The precise quantitative results of the paper"
+      ],
+      "documented_limitation": "Section IV.B explicitly limits CURT to same-modality registration and explains that tests with known deformations do not establish registration accuracy between independent acquired images. Section IV.C calls for independent spatial evidence. The class periodic-pattern example uses a different mechanism from CURT.",
+      "limitation_locator": "Section IV.B-C",
+      "classroom_extension": "Provide independent points with a known displacement so the audience can see the conflict between geometric truth and an ambiguous appearance score.",
+      "testable_question": "Can an excellent similarity score coexist with a clearly incorrect geometric displacement on a repeated pattern?",
+      "primary_metric": "Independent geometric error in pixels; MSE/NCC are deliberately contrasted with it.",
+      "can_conclude": "That the selected appearance score cannot distinguish the tested repeated-pattern alignments, despite different coordinate error.",
+      "cannot_conclude": "That every high similarity score is wrong, that all registration metrics are useless, or that the original clinical/nonrigid experiments were replicated.",
+      "anchor_text": "Rohlfing (2012) demonstrates that surrogate scores can mislead. A simpler repeated-pattern example makes the need for independent geometric evidence visible.",
+      "slide_mapping": {
+        "original_main": [
+          23,
+          24,
+          25,
+          26
+        ],
+        "beginner_main": [
+          28,
+          29,
+          30,
+          31,
+          38,
+          48,
+          51
+        ],
+        "original_research": [
+          43,
+          44
+        ],
+        "beginner_research": [
+          63,
+          64
+        ]
+      },
+      "limitation_origin": "explicit_study_limitations_and_recommendations"
+    }
+  ],
+  "supporting_sources": [
+    {
+      "reference_id": 3,
+      "case_ids": [
+        "R2"
+      ],
+      "title": "Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography",
+      "authors": [
+        "Martin A. Fischler",
+        "Robert C. Bolles"
+      ],
+      "year": 1981,
+      "doi": "10.1145/358669.358692",
+      "url": "https://www.sri.com/publication/artificial-intelligence-pubs/random-sample-consensus-a-paradigm-for-model-fitting-with-applications-to-image-analysis-and-automated-cartography/",
+      "role": "Supporting robust-fitting method; not an additional research case."
+    },
+    {
+      "reference_id": 16,
+      "case_ids": [
+        "R5"
+      ],
+      "title": "Revisiting overlap invariance in medical image alignment",
+      "authors": [
+        "Nathan D. Cahill",
+        "Julia A. Schnabel",
+        "J. Alison Noble",
+        "David J. Hawkes"
+      ],
+      "year": 2008,
+      "venue": "2008 IEEE Computer Society Conference on Computer Vision and Pattern Recognition Workshops",
+      "pages": "1-8",
+      "doi": "10.1109/CVPRW.2008.4562989",
+      "url": "https://doi.org/10.1109/CVPRW.2008.4562989",
+      "full_text_url": "https://people.rit.edu/~ndcsma/pubs/MMBIA_June_2008.pdf",
+      "role": "Primary follow-up checking the overlap-invariance boundary; not a seventh experiment.",
+      "evidence": [
+        "PDF p. 2 Eq. (4): NMI formula",
+        "PDF pp. 1-3 Section 2/Figs. 1-2: ordinary NMI counterexample",
+        "PDF p. 7 Section 6: modified measures require stated background assumptions and broader validation."
+      ]
+    }
+  ],
+  "access_notes": [
+    "Full original papers were inspected for Umeyama, Rublee, Guizar-Sicairos, Viola/Wells, and Rohlfing.",
+    "The original Studholme 1999 full text was not accessible in this run. Its metadata and attribution are retained, while the formula and overlap caveat are supported by the inspected primary follow-up Cahill et al. 2008.",
+    "Crossref and OpenAlex were used to discover and verify publication identities and locate source copies; substantive claims rely on the published papers themselves.",
+    "No recent systematic literature review or novelty claim is made. Older authors' future-work statements are labeled historically and do not establish an unresolved problem in 2026."
+  ]
+}

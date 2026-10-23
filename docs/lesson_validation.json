@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "slides": 86,
+  "main_slides": 44,
+  "optional_slides": 42,
+  "source_activities": 32,
+  "native_worked_lessons": 7,
+  "purpose_introductions": 6,
+  "browser_checks": 55,
+  "browser_steps": 45,
+  "executed_notebook_cells": 22,
+  "notebook_errors": 0,
+  "all_slides_visually_reviewed": true,
+  "slide_notes_checked_in_saved_pptx": true,
+  "declared_demo_links_verified": 71,
+  "planned_minutes": 45,
+  "timing_boundary": "42 planned discussion/demo minutes plus 3 for transitions; not a measured rehearsal.",
+  "scope": "Validation of the finished source lesson before repository packaging; repository checks are separate."
+}

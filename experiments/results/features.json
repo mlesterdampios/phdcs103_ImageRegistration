@@ -1,0 +1,113 @@
+{
+  "id": "features",
+  "slides": [
+    11,
+    12
+  ],
+  "method": "ORB + RANSAC similarity transform",
+  "n_trials": 15,
+  "resolution_px": [
+    384,
+    384
+  ],
+  "baseline_mean_px": 23.303981312672114,
+  "estimated_mean_px": 0.1726806339679545,
+  "estimated_median_px": 0.15838527097951585,
+  "estimated_max_px": 0.37507983312195464,
+  "oracle_mean_px": 0.0,
+  "criterion_px": 2.0,
+  "success_count": 15,
+  "seconds_median": 0.21181959999375977,
+  "figures": [
+    "feature_example.png",
+    "feature_matches.png",
+    "feature_results.png"
+  ],
+  "metric_direction": "Independent-point geometric error, pixels; lower is better.",
+  "example": {
+    "trial": 1,
+    "forward_matrix": [
+      [
+        0.9928351317911468,
+        0.21153922159779506,
+        -21.193177118870942
+      ],
+      [
+        -0.21153922159779506,
+        0.9928351317911468,
+        38.96864064914604
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "estimated_matrix": [
+      [
+        0.964964771863482,
+        -0.20507695883419058,
+        28.04379343544258
+      ],
+      [
+        0.20507695883419058,
+        0.964964771863482,
+        -33.28964973142933
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "counts": {
+      "fixed_keypoints": 1766,
+      "moving_keypoints": 1767,
+      "ratio_matches": 1108,
+      "inliers": 995
+    },
+    "image_comparison": {
+      "baseline": {
+        "mse": 0.04796336792121059,
+        "ncc": 0.7272723356632376,
+        "mi_nats": 0.6947016384443906,
+        "valid_pixels": 119757
+      },
+      "estimated": {
+        "mse": 0.0004905529957492791,
+        "ncc": 0.9975978320198101,
+        "mi_nats": 2.0116100233981937,
+        "valid_pixels": 119757
+      },
+      "oracle": {
+        "mse": 0.00040488412257211006,
+        "ncc": 0.9980987218311271,
+        "mi_nats": 2.0623548041264024,
+        "valid_pixels": 119757
+      },
+      "overlap_fraction": 0.8121541341145834
+    },
+    "point_error": {
+      "mean_px": 0.21667589491362055,
+      "median_px": 0.21923272238540464,
+      "max_px": 0.4306994826445362,
+      "n_points": 64
+    }
+  },
+  "failure_example": {
+    "case": "Uniform image",
+    "estimated_transform_available": false,
+    "fixed_keypoints": 0,
+    "moving_keypoints": 0,
+    "ratio_matches": 0,
+    "inliers": 0
+  },
+  "records_csv": "feature_trials.csv",
+  "settings": {
+    "nfeatures": 1800,
+    "ratio_threshold": 0.75,
+    "ransac_threshold_px": 3,
+    "model": "similarity"
+  },
+  "interpretation": "Small held-out point error supports geometric recovery for these modest transforms on one textured image; inlier count alone is not proof."
+}

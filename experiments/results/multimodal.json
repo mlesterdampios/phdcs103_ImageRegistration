@@ -1,0 +1,170 @@
+{
+  "id": "contrast",
+  "slides": [
+    18,
+    19
+  ],
+  "purpose": "Compare metric assumptions with an explicitly simulated contrast inversion.",
+  "n_trials": 1,
+  "resolution_px": [
+    160,
+    160
+  ],
+  "forward_shift_xy_px": [
+    11,
+    -7
+  ],
+  "known_inverse_xy_px": [
+    -11,
+    7
+  ],
+  "methods": [
+    {
+      "method": "mse",
+      "correction_x_px": -16,
+      "correction_y_px": -16,
+      "metric_score": 0.2130681872367859,
+      "baseline_mean_px": 13.038404810405298,
+      "estimated_mean_px": 23.53720459187964,
+      "oracle_mean_px": 0.0,
+      "success_le_2px": false,
+      "search_radius_px": 16,
+      "search_step_px": 1,
+      "valid_pixels": 10404
+    },
+    {
+      "method": "ncc",
+      "correction_x_px": 16,
+      "correction_y_px": 16,
+      "metric_score": -0.17258824408054352,
+      "baseline_mean_px": 13.038404810405298,
+      "estimated_mean_px": 28.460498941515414,
+      "oracle_mean_px": 0.0,
+      "success_le_2px": false,
+      "search_radius_px": 16,
+      "search_step_px": 1,
+      "valid_pixels": 10404
+    },
+    {
+      "method": "mi_nats",
+      "correction_x_px": -11,
+      "correction_y_px": 7,
+      "metric_score": 2.412159368938488,
+      "baseline_mean_px": 13.038404810405298,
+      "estimated_mean_px": 0.0,
+      "oracle_mean_px": 0.0,
+      "success_le_2px": true,
+      "search_radius_px": 16,
+      "search_step_px": 1,
+      "valid_pixels": 10404
+    }
+  ],
+  "search_seconds": 1.3691186000069138,
+  "best": {
+    "mse": {
+      "dx_px": -16,
+      "dy_px": -16,
+      "score": 0.2130681872367859,
+      "valid_pixels": 10404
+    },
+    "ncc": {
+      "dx_px": 16,
+      "dy_px": 16,
+      "score": -0.17258824408054352,
+      "valid_pixels": 10404
+    },
+    "mi_nats": {
+      "dx_px": -11,
+      "dy_px": 7,
+      "score": 2.412159368938488,
+      "valid_pixels": 10404
+    }
+  },
+  "records_csv": "contrast_metric_comparison.csv",
+  "baseline_mean_px": 13.038404810405298,
+  "estimated_mean_px": 0.0,
+  "oracle_mean_px": 0.0,
+  "criterion_px": 2.0,
+  "success_count": 1,
+  "search": {
+    "radius_px": 16,
+    "step_px": 1,
+    "bins": 32,
+    "margin_px": 29,
+    "roi": "constant central 102 x 102 pixels; excludes introduced fill for every candidate"
+  },
+  "figures": [
+    "contrast_example.png",
+    "contrast_metric_search.png",
+    "joint_histograms.png"
+  ],
+  "interpretation": "MI recovers the introduced shift here. Signed NCC expects positive correlation; using absolute NCC would be a different metric. One simulated case is not evidence of universal superiority.",
+  "genuine": {
+    "available": true,
+    "source": "Public ITK T1 / proton-density MRI teaching pair",
+    "resolution_px": [
+      221,
+      257
+    ],
+    "introduced_shift_xy_px": [
+      9,
+      -6
+    ],
+    "native_mi_optimum_xy_px": [
+      0,
+      0
+    ],
+    "shifted_mi_optimum_xy_px": [
+      -9,
+      6
+    ],
+    "incremental_correction_xy_px": [
+      -9,
+      6
+    ],
+    "perturbation_recovery_error_px": 0.0,
+    "introduced_displacement_px": 10.816653826391969,
+    "records_csv": "genuine_multimodal_search.csv",
+    "methods": [
+      {
+        "method": "mse",
+        "native_optimum_x_px": 0,
+        "native_optimum_y_px": 0,
+        "shifted_optimum_x_px": -9,
+        "shifted_optimum_y_px": 6,
+        "recovery_x_px": -9,
+        "recovery_y_px": 6,
+        "perturbation_recovery_error_px": 0.0,
+        "valid_pixels": 27756
+      },
+      {
+        "method": "ncc",
+        "native_optimum_x_px": 0,
+        "native_optimum_y_px": 0,
+        "shifted_optimum_x_px": -9,
+        "shifted_optimum_y_px": 6,
+        "recovery_x_px": -9,
+        "recovery_y_px": 6,
+        "perturbation_recovery_error_px": 0.0,
+        "valid_pixels": 27756
+      },
+      {
+        "method": "mi_nats",
+        "native_optimum_x_px": 0,
+        "native_optimum_y_px": 0,
+        "shifted_optimum_x_px": -9,
+        "shifted_optimum_y_px": 6,
+        "recovery_x_px": -9,
+        "recovery_y_px": 6,
+        "perturbation_recovery_error_px": 0.0,
+        "valid_pixels": 27756
+      }
+    ],
+    "roi": "fixed PD foreground > 0.07, inside constant central ROI with 27-pixel margin; same mask for native and perturbed search",
+    "figures": [
+      "genuine_multimodal.png",
+      "genuine_metric_search.png"
+    ],
+    "interpretation": "The error measures recovery of the researcher-introduced displacement relative to the native metric optimum. It does not establish native anatomical alignment or clinical accuracy."
+  }
+}

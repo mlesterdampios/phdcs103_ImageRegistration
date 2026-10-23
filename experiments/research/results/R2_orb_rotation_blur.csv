@@ -1,0 +1,13 @@
+case_id,rotation_degrees_opencv,moving_blur_sigma_px,fixed_keypoints,moving_keypoints,ratio_pass_matches,returned_ransac_inliers,independent_mean_error_fixed_px,status
+angle_0_blur_0p0,0,0.0,803,787,558,538,0.21064491672197377,measured
+angle_0_blur_1p5,0,1.5,803,408,335,313,0.2050433723749517,measured
+angle_0_blur_3p0,0,3.0,803,112,109,65,1.8015823673273823,measured
+angle_15_blur_0p0,15,0.0,803,764,510,495,0.23487094925615917,measured
+angle_15_blur_1p5,15,1.5,803,401,309,249,0.3807471215750004,measured
+angle_15_blur_3p0,15,3.0,803,112,101,59,1.1124441859158818,measured
+angle_45_blur_0p0,45,0.0,803,798,487,466,0.3367441663578948,measured
+angle_45_blur_1p5,45,1.5,803,420,288,259,0.44949541105925933,measured
+angle_45_blur_3p0,45,3.0,803,117,107,71,1.1896291223690523,measured
+angle_75_blur_0p0,75,0.0,803,806,529,457,0.7514272116415439,measured
+angle_75_blur_1p5,75,1.5,803,428,312,270,0.7711639779162905,measured
+angle_75_blur_3p0,75,3.0,803,132,112,68,1.773457948002522,measured
